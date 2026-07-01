@@ -1,0 +1,56 @@
+name: Tech Blue
+label_zh: 蓝色科技感风
+description: Deep blue technology launch style for AI, cyber, infrastructure, and high-stakes technical narratives.
+best_for:
+  - AI launch visuals
+  - cybersecurity timelines
+  - technical keynote pages
+  - infrastructure narratives
+  - product capability pages
+layout:
+  aspect_ratio: "16:9"
+  background: deep blue gradient
+  composition:
+    - large headline area
+    - horizontal timeline or central hero visual
+    - glass cards for structured information
+    - risk or alert module when needed
+colors:
+  deep_blue: "#061A3A"
+  cobalt_blue: "#0A4DB3"
+  electric_blue: "#19A7FF"
+  cyan: "#48D1FF"
+  cold_white: "#F4FBFF"
+  amber_alert: "#FFB020"
+  red_alert: "#E53935"
+color_rules:
+  - Use deep blue, cobalt blue, electric blue, and cold white as the main palette.
+  - Use amber or red only for alerts and regulatory intervention.
+  - Avoid rainbow gradients.
+visual_elements:
+  - low-brightness data flow
+  - network nodes
+  - infrastructure grid
+  - cold scan lines
+  - subtle light bands
+  - AI model core
+  - access control rings
+  - compliance lockdown
+  - broken network links
+glassmorphism:
+  allowed: true
+  treatment:
+    - translucent deep-blue cards
+    - cold-white borders
+    - electric-blue connectors
+avoid:
+  - messy tech lines
+  - excessive neon
+  - cyberpunk city scenes
+  - meaningless decoration
+  - complex texture backgrounds
+  - unreadable text
+prompt_guidance:
+  - Keep the tone professional, restrained, cold, and technically credible.
+  - Use cinematic depth only when it supports the message.
+  - Prefer structured timelines, security boundaries, data flow, and system isolation visuals.

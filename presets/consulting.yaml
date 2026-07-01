@@ -1,0 +1,52 @@
+name: Consulting
+label_zh: 商务咨询风
+description: Clean executive presentation style for business reports, strategy pages, market analysis, and data-driven slides.
+best_for:
+  - executive presentations
+  - consulting decks
+  - strategy reports
+  - business analysis
+  - data comparison
+layout:
+  aspect_ratio: "16:9"
+  background: clean white or very light gray
+  grid: strict
+  whitespace: generous
+  composition:
+    - clear title area
+    - focused insight area
+    - modular cards
+    - concise chart region
+colors:
+  navy: "#1B2A41"
+  blue_gray: "#456179"
+  light_blue: "#EAF2F8"
+  dark_gray: "#222222"
+  mid_gray: "#6B7280"
+  white: "#FFFFFF"
+color_rules:
+  - Use restrained neutrals and blue-gray accents.
+  - Highlight only the key insight.
+  - Avoid saturated decorative palettes.
+typography:
+  title:
+    style: clean sans-serif
+    weight: bold
+  body:
+    style: clean sans-serif
+    weight: regular
+visual_elements:
+  - structured cards
+  - simple charts
+  - soft shadows
+  - thin dividers
+  - clean icons
+avoid:
+  - decorative backgrounds
+  - cinematic lighting
+  - dense text blocks
+  - unnecessary illustrations
+prompt_guidance:
+  - Keep the slide quiet, executive, and easy to scan.
+  - Preserve editable PPT text for bottom-image mode.
+  - Use charts only when data relationships justify them.

@@ -1,0 +1,128 @@
+name: Anheng
+label_zh: 安恒风格
+description: Enterprise cybersecurity solution presentation style for security launches, government-enterprise reports, SOC, AI security, data security, and digital infrastructure.
+best_for:
+  - cybersecurity
+  - government-enterprise reporting
+  - security product launches
+  - SOC
+  - AI security
+  - data security
+  - attack-defense
+  - digital infrastructure
+layout:
+  aspect_ratio: "16:9"
+  header:
+    height: "10%"
+    background: "#0F256C"
+    title_position: left
+    title_font: Microsoft YaHei
+    title_size: "32pt"
+    title_weight: bold
+    title_color: "#FFFFFF"
+  body:
+    height: "85%"
+    background: "#FFFFFF"
+    alignment: strict grid
+    whitespace: generous
+colors:
+  primary_blue: "#08287F"
+  primary_red: "#C7001C"
+  title_bar_blue: "#0F256C"
+  navy: "#0E0880"
+  lake_blue: "#084D80"
+  cyan_blue: "#087380"
+  brick_red: "#C71B00"
+  orange_red: "#C73E00"
+  dark_gray: "#212121"
+  black: "#000000"
+  white: "#FFFFFF"
+color_rules:
+  - Use blue and white as the dominant palette.
+  - Use red only for risk, warning, key conclusion, key number, or strong emphasis.
+  - Do not use rainbow gradients or unbranded multi-color gradients.
+information_hierarchy:
+  primary:
+    usage: Core conclusion
+    colors:
+      - "#08287F"
+      - "#C7001C"
+    treatment:
+      - largest type
+      - focal area
+      - dark-blue gradient card
+      - red emphasis tag when needed
+  secondary:
+    usage: Supporting facts, stages, modules, metrics
+    colors:
+      - "#08287F"
+      - "#084D80"
+      - "#087380"
+    treatment:
+      - white cards
+      - light-blue glass cards
+      - modular layout
+  tertiary:
+    usage: Context, notes, explanations
+    colors:
+      - "#212121"
+    treatment:
+      - smaller text
+      - light background box
+glassmorphism:
+  allowed: true
+  opacity: "85%-95%"
+  border: "1px light blue or light gray"
+  radius: "8-16px"
+  shadow: soft
+  avoid:
+    - strong neon
+    - cyberpunk effects
+gradients:
+  allowed:
+    - "#08287F -> #0F256C"
+    - "#08287F -> #084D80"
+    - "#084D80 -> #087380"
+    - "#08287F -> #0E0880"
+    - "#C7001C -> #C71B00"
+    - "#C7001C -> #C73E00"
+long_text_rules:
+  - Put long text in colored background boxes.
+  - Use light-blue panels, glassmorphism cards, segmented short sentences, or emphasis bars.
+  - Do not pile dense long text directly on a white background.
+visual_themes:
+  - shield
+  - lock
+  - network nodes
+  - data flow
+  - cloud security
+  - chip
+  - server
+  - SOC
+  - risk radar
+  - timeline nodes
+  - architecture modules
+  - process arrows
+avoid:
+  - messy decorative lines
+  - complex meaningless patterns
+  - large complex body background images
+  - abstract glare
+  - cyberpunk clutter
+mandatory_prompt_phrases:
+  - "16:9 enterprise cybersecurity presentation slide"
+  - "top 10% dark blue title bar #0F256C"
+  - "white bold Microsoft YaHei title on the left"
+  - "lower 85% pure white content area"
+  - "Anheng brand palette: #08287F, #C7001C, #0F256C, #084D80, #087380, #212121, #FFFFFF"
+  - "clean corporate cybersecurity style"
+  - "glassmorphism cards or glass modules where appropriate"
+  - "soft blue gradients"
+  - "clear visual hierarchy"
+  - "colored background box for long text"
+  - "red only for risk or key warning emphasis"
+  - "generous whitespace"
+  - "strict grid alignment"
+  - "no messy decorative lines"
+  - "no complex meaningless patterns"
+  - "professional enterprise security solution presentation tone"
