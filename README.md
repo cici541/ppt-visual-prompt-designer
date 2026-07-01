@@ -93,10 +93,10 @@ When a slide matches both enterprise security and digital transformation themes,
 ## Installation
 
 ```bash
-npx skills add <repo-url>
+npx skills add https://github.com/cici541/ppt-visual-prompt-designer
 ```
 
-Replace `<repo-url>` with this repository's GitHub URL.
+Repository: [cici541/ppt-visual-prompt-designer](https://github.com/cici541/ppt-visual-prompt-designer)
 
 ## Example
 
