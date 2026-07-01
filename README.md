@@ -24,6 +24,7 @@ It is not a PPT generator. It helps Claude analyze a slide's message, choose a j
 - Style presets
 - Anheng enterprise cybersecurity style support
 - Blue Gold Tech style for digital transformation and value-creation consulting pages
+- Black Gold Launch style for financing proposals, investor roadshows, business plans, and premium launch decks
 - Chinese and English output fields based on user language
 - Bottom-image mode and finished-image mode
 
@@ -42,6 +43,7 @@ flowchart LR
     E --> P2["presets/consulting.yaml"]
     E --> P3["presets/tech-blue.yaml"]
     E --> P4["presets/blue-gold-tech.yaml"]
+    E --> P5["presets/black-gold-launch.yaml"]
 ```
 
 ## Workflow
@@ -56,10 +58,12 @@ flowchart TD
     F -->|Yes| G["Ask one question"]
     F -->|No| H{"Need style?"}
     G --> H
+    H -->|Capital roadshow| N["Recommend Black Gold Launch style"]
     H -->|Enterprise security| I["Recommend Anheng style"]
     H -->|Digital transformation| M["Recommend Blue Gold Tech style"]
     H -->|General content| J["Ask style preset"]
     H -->|Known| K["Load preset"]
+    N --> K
     I --> K
     M --> K
     J --> K
@@ -74,10 +78,15 @@ flowchart TD
 | Consulting | `presets/consulting.yaml` | Business reports, executive decks, strategy pages, data-heavy slides |
 | Tech Blue | `presets/tech-blue.yaml` | Blue technology launch visuals, AI safety events, cyber timelines, infrastructure narratives |
 | Blue Gold Tech | `presets/blue-gold-tech.yaml` | Enterprise digital transformation, strategy reports, consulting proposals, capability models, value creation, transformation roadmaps |
+| Black Gold Launch | `presets/black-gold-launch.yaml` | Financing proposals, business plans, investor roadshows, company introductions, market analysis, financial forecasts, premium launch decks |
+
+If the user does not specify a style and the content is about financing, roadshows, business plans, project background, strategy planning, financial forecasts, fundraising plans, market analysis, commercial value, capital expression, company introductions, or premium business launches, the skill recommends Black Gold Launch style first.
 
 If the user does not specify a style and the content is about cybersecurity, government-enterprise reporting, security launch events, SOC, attack-defense, data security, AI security, code audit security, or digital infrastructure, the skill recommends Anheng style first.
 
 If the user does not specify a style and the content is about digital transformation, strategy planning, consulting reports, growth flywheels, capability systems, value creation, intelligent operations, enterprise upgrades, or business transformation, the skill recommends Blue Gold Tech style first.
+
+When a slide matches capital roadshow themes and another domain theme, Black Gold Launch remains the first recommendation unless the user explicitly asks for another preset.
 
 When a slide matches both enterprise security and digital transformation themes, Anheng remains the first recommendation unless the user explicitly asks for Blue Gold Tech or a blue-gold value style.
 
@@ -153,6 +162,7 @@ ppt-visual-prompt-designer/
 │   └── data-slide.md
 ├── presets/
 │   ├── anheng.yaml
+│   ├── black-gold-launch.yaml
 │   ├── blue-gold-tech.yaml
 │   ├── consulting.yaml
 │   └── tech-blue.yaml

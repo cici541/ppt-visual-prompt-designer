@@ -1,0 +1,316 @@
+name: Black Gold Launch
+key: black-gold-launch
+label_zh: 黑金发布会
+description: High-end black and gold business launch and investor pitch style for financing proposals, roadshows, business plans, project reports, premium business presentations, and capital-oriented storytelling.
+best_for:
+  - financing proposal
+  - business plan
+  - investor roadshow
+  - project presentation
+  - company introduction
+  - team introduction
+  - market analysis
+  - strategy planning
+  - business proposal
+  - operation model
+  - financial forecast
+  - fundraising plan
+  - high-end business launch
+positioning:
+  concept: dark premium business launch plus black-gold luxury texture plus high-end investor pitch expression
+  tone:
+    - black-gold business
+    - high-end launch event
+    - investor roadshow
+    - capital-oriented
+    - light luxury texture
+    - dark minimalism
+    - business reporting
+    - refined and premium
+    - stable and professional
+    - gold light accents
+    - strategy proposal style
+    - commercial value expression
+layout:
+  aspect_ratio: "16:9"
+  background:
+    - "#000000"
+    - "#0B0B0B"
+    - "#121212"
+    - "#1A1A1A"
+    - "#000000 -> #1A1A1A"
+  structure:
+    cover:
+      - centered main title
+      - large Chinese title plus decorative English subtitle
+      - subtitle, presenter, date, or scene note below
+      - black background with gold flowing wave lines
+      - optional gold rounded label for presenter information
+    agenda:
+      - circular gold icon nodes
+      - horizontal or grouped directory items
+      - icon plus short title structure
+    chapter_divider:
+      - PART ONE / PART TWO / PART THREE / PART FOUR English section mark
+      - large Chinese section title below
+      - large black negative space
+      - gold wave-line background
+      - very minimal information
+    content:
+      - title in the upper-left or top area
+      - two-column layout, card modules, circular nodes, process relations, or data charts
+      - light-gold borders or dark card containers
+      - suitable for chart plus explanation, module cards plus icons, relationship diagram plus notes
+  rules:
+    - Use modular business order and clear grouping.
+    - Keep generous negative space.
+    - Keep chapter, cover, and content pages visually premium and stable.
+colors:
+  black: "#000000"
+  deep_black_gray: "#0B0B0B"
+  charcoal_black: "#121212"
+  dark_gray_black: "#1A1A1A"
+  warm_gold: "#C9A063"
+  champagne_gold: "#D8B07A"
+  light_gold: "#E7C79A"
+  dark_gold_brown: "#8B6A3E"
+  soft_gold_highlight: "#F2DEC2"
+  white: "#FFFFFF"
+  light_gray_white: "#E8E8E8"
+  mid_gray: "#9A9A9A"
+  deep_gray: "#5E5E5E"
+  card_dark_gray: "#202020"
+  divider_gray_gold: "#6E5A3D"
+color_rules:
+  - Use black or deep gray-black as the overall page background to create a premium business launch stage feeling.
+  - Use gold for core titles, key numbers, icons, module titles, nodes, important conclusions, borders, and highlights.
+  - Use white and light gray-white for body text to preserve readability on dark backgrounds.
+  - Gold represents value, capital, quality, outcomes, and emphasis; do not overuse it across the whole page.
+  - Keep the main palette black, gold, and white.
+  - Do not use saturated blue, red, or green as main colors unless the user explicitly asks for risk or special emphasis.
+  - Gold must feel like warm gold or champagne gold, not cheap bright yellow.
+background_atmosphere:
+  recommended:
+    - clean black background
+    - deep black gradient
+    - soft gold flowing lines
+    - gold wave lines
+    - gold light arcs
+    - low-brightness curved light bands
+    - local gold highlights
+    - deep dark negative space
+    - extremely subtle gold particles
+    - very restrained premium dark texture
+  rules:
+    - Keep the background clean, restrained, and premium.
+    - Use gold wave lines mainly on cover, chapter, and transition pages.
+    - Gold flowing lines should feel elegant and luxury-brand-like, not overly technical or flashy.
+    - On content pages, weaken decoration and preserve dark background plus subtle gold lines.
+    - Preserve enough negative space for readable content.
+    - Do not let background lines interfere with charts or body text.
+information_hierarchy:
+  primary:
+    usage: Page title, chapter title, core conclusion, key amount, core value point
+    treatment:
+      - large type size
+      - white or gold
+      - bold or premium business title font
+      - focal area placement
+      - gold label or soft gold highlight when needed
+  secondary:
+    usage: Module titles, agenda items, strategy points, process nodes, team roles, key sections
+    treatment:
+      - gold, white, or gold-outlined modules
+      - medium type size
+      - dark cards, circular nodes, or modular containers
+      - clear grouping
+  tertiary:
+    usage: Body explanation, notes, supplementary information, footnotes, chart notes
+    treatment:
+      - light gray-white or mid-gray text
+      - smaller type size
+      - comfortable line spacing
+      - deep card or dark negative-space area
+      - should not compete with primary visuals
+typography:
+  chinese:
+    preferred:
+      - Source Han Sans
+      - Microsoft YaHei
+      - Alibaba PuHuiTi
+      - HarmonyOS Sans
+  english:
+    preferred:
+      - Montserrat
+      - Inter
+      - Helvetica Neue
+      - DIN
+      - Trajan-style title font for small decorative use only
+  cover_chinese_title:
+    size: "36-54pt"
+    weight: "Bold / Heavy"
+  cover_english_decorative_title:
+    size: "20-36pt"
+    weight: "Light / Medium"
+    tracking: wide
+  chapter_chinese_title:
+    size: "30-42pt"
+    weight: bold
+  page_title:
+    size: "22-30pt"
+    weight: bold
+  module_title:
+    size: "16-22pt"
+    weight: semibold
+  body:
+    size: "12-14pt"
+    weight: regular
+  auxiliary:
+    size: "10-12pt"
+    weight: "Regular / Light"
+  rules:
+    - Chinese titles should be stable, grand, and business-like.
+    - English can create atmosphere but must not dominate the message.
+    - Body text on dark backgrounds must be clear and not too thin.
+    - Titles may use gold; body text should prioritize white or gray-white.
+    - Do not use exaggerated artistic fonts for body copy.
+visual_elements:
+  gold_wave_lines:
+    usage:
+      - cover pages
+      - chapter pages
+      - transition pages
+    treatment:
+      - fine and soft lines
+      - layered wave structure
+      - light luxury and premium flow
+  circular_gold_icon_nodes:
+    usage:
+      - agenda
+      - team introduction
+      - relationship nodes
+      - process steps
+    treatment:
+      - gold outline
+      - soft highlight
+      - light 3D depth
+      - icon, number, or short title inside
+  dark_card_modules:
+    usage:
+      - body content
+      - content grouping
+      - data explanation
+      - business sections
+      - future plans
+      - financial forecasts
+    treatment:
+      - deep gray-black or translucent dark cards
+      - light gold border
+      - gold title label
+      - subtle shadow
+  gold_relation_rings:
+    usage:
+      - market analysis
+      - operation model
+      - strategic goals
+      - ecosystem relationships
+    treatment:
+      - central circle for core topic
+      - surrounding circles for branch modules
+      - simple connections without tangled lines
+  business_data_charts:
+    usage:
+      - bar charts
+      - process charts
+      - metric cards
+      - node diagrams
+      - timeline planning cards
+    treatment:
+      - dark base with gold highlights
+      - white or gray supporting information
+visual_texture:
+  allowed:
+    - metallic gold labels
+    - light-gold gradient buttons
+    - soft gold highlights
+    - slight 3D circular icons
+    - dark cards with gold borders
+    - delicate wave lines
+    - subtle glow
+    - low-saturation gold gradients
+    - rounded modules
+    - simple business shadows
+  avoid:
+    - cheap overly reflective metallic effects
+    - strong mirror effects
+    - cyber neon technology effects
+    - colorful gradients that pollute the palette
+    - large complex textures
+    - excessive glow
+    - tacky bright-gold appearance
+charts:
+  suitable:
+    - dark bar chart
+    - gold-highlighted column chart
+    - circular relationship diagram
+    - market analysis relationship map
+    - business module cards
+    - process planning
+    - strategy roadmap
+    - financial forecast cards
+    - fundraising plan block diagram
+    - node-based structure diagram
+  rules:
+    - Use gold as the main highlight on dark backgrounds.
+    - Use gray or white for supporting information.
+    - Keep chart borders, axes, and connectors thin and refined.
+    - Use light-gold gradients only when they add hierarchy.
+    - Avoid colorful multi-category charts.
+    - Do not use complex 3D pie charts or exaggerated office-chart styles.
+image_text_modules:
+  - Put photos of buildings, people, or scenes into dark containers or harmonize them with black-gold tones.
+  - Use thin gold borders around images when appropriate.
+  - Pair image captions and descriptions as clear card groups.
+  - Use columns, cards, and borders to structure image-text layouts.
+  - Do not paste messy image collages directly onto the page.
+  - Prefer fewer, higher-quality images.
+long_text_rules:
+  - Do not lay out large body text as flat paragraphs.
+  - Use segmented cards, bullets, left-side gold labels, circular icon aids, columns, and dark-gray text cards.
+  - Highlight key phrases in gold only when they express capital, value, outcome, or emphasis.
+  - Suggested card background: "#1A1A1A" or "#202020".
+  - Suggested border: thin gold outline.
+  - Suggested title color: gold or white.
+  - Suggested body color: light gray-white.
+  - Suggested shadow: very subtle and premium.
+  - Avoid white-background long paragraphs, dense tiny text on dark backgrounds, ungrouped long copy, and text placed over complex flowing lines.
+avoid:
+  - blue-white consulting report look
+  - flashy internet cartoon style
+  - strong cyberpunk technology style
+  - saturated colorful collage
+  - messy decorative lines
+  - cheap gold gradients
+  - overly complex chart textures
+  - information piles without hierarchy
+  - excessive glow
+  - large black pages without readable contrast
+mandatory_prompt_phrases:
+  - "16:9 high-end black and gold business presentation slide"
+  - "dark premium background with subtle black gradient"
+  - "elegant gold wave lines or flowing metallic curves"
+  - "luxury business launch style"
+  - "black-gold financing proposal aesthetic"
+  - "white and champagne-gold typography"
+  - "strong visual hierarchy"
+  - "modular dark content cards with gold accents"
+  - "gold circular icons or node elements"
+  - "premium pitch deck / investor presentation tone"
+  - "clean layout with generous negative space"
+  - "dark elegant chapter divider style"
+  - "refined charts and diagrams in black and gold"
+  - "subtle glow, not flashy"
+  - "no colorful palette"
+  - "no blue consulting report look"
+  - "no messy decorative patterns"
+  - "professional, high-end, capital-oriented visual tone"

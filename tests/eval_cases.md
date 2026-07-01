@@ -125,3 +125,35 @@ Please turn this slide content into a visual generation prompt. Slide: Our platf
 - Recognizes the digital transformation / intelligent operations / capability system context.
 - Recommends Blue Gold Tech style first when asking about visual style.
 - Still asks only one follow-up question per turn.
+
+## Case 9: Black Gold Launch financing proposal direct generation
+
+**Prompt**
+
+```text
+不用问，直接生成。使用黑金发布会，把这一页转成 PPT 画面提示词：标题是“新一代智能制造平台融资计划书”。内容包括项目背景、市场空间、商业模式、核心团队、融资用途、三年财务预测，想表达项目具备高成长性和资本价值。输出成品图。
+```
+
+**Expected**
+
+- Uses `presets/black-gold-launch.yaml`.
+- Outputs all required Chinese final sections.
+- Classifies the page as a financing proposal, investor roadshow, business plan, or premium business presentation slide.
+- Uses a dark black or deep gray-black background with warm gold or champagne-gold accents.
+- Uses gold for capital value, key numbers, core conclusions, icons, nodes, and important highlights.
+- Includes Black Gold Launch mandatory prompt phrases such as `16:9 high-end black and gold business presentation slide`, `dark premium background with subtle black gradient`, `black-gold financing proposal aesthetic`, `premium pitch deck / investor presentation tone`, and `professional, high-end, capital-oriented visual tone`.
+- Avoids blue consulting report look, messy decorative patterns, colorful palette, cheap bright gold, and cyberpunk neon effects.
+
+## Case 10: Capital roadshow style recommendation
+
+**Prompt**
+
+```text
+帮我把这一页转成 PPT 画面提示词：标题是“商业计划书核心投资亮点”。内容包括市场规模、增长逻辑、团队优势、商业模式、融资计划和退出路径。还没想好风格。
+```
+
+**Expected**
+
+- Recognizes the financing / investor roadshow / business plan context.
+- Recommends Black Gold Launch style first when asking about visual style.
+- Still asks only one follow-up question per turn.
