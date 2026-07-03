@@ -10,6 +10,10 @@
   <img alt="Prompt Engineering" src="https://img.shields.io/badge/prompt-engineering-C7001C.svg">
 </p>
 
+<p align="center">
+  English | <a href="./README.zh-CN.md">简体中文</a>
+</p>
+
 # ppt-viz
 
 `ppt-viz` is a multi-turn skill for transforming slide content into presentation-ready visual generation prompts. It can also be invoked with the Chinese short name `PPT设计`.
