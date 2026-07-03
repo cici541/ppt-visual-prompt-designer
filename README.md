@@ -4,7 +4,7 @@
 
 <p align="center">
   <a href="./LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-blue.svg"></a>
-  <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-08287F.svg">
+  <img alt="Version" src="https://img.shields.io/badge/version-1.2.0-08287F.svg">
   <img alt="Claude Skill" src="https://img.shields.io/badge/Claude-Skill-5B5FC7.svg">
   <img alt="Presentation Design" src="https://img.shields.io/badge/presentation-visual%20design-087380.svg">
   <img alt="Prompt Engineering" src="https://img.shields.io/badge/prompt-engineering-C7001C.svg">
@@ -31,6 +31,8 @@ It is not a PPT generator. It helps Claude analyze a slide's message, choose a j
 - Black Gold Launch style for financing proposals, investor roadshows, business plans, and premium launch decks
 - Chinese and English output fields based on user language
 - Bottom-image mode and finished-image mode
+- Deck-consistency mode for generating multi-slide prompts under one visual system
+- Design Heuristics module for style fit, color semantics, content density, chart choice, readability, and consistency checks
 
 ## Architecture
 
@@ -94,13 +96,42 @@ When a slide matches capital roadshow themes and another domain theme, Black Gol
 
 When a slide matches both enterprise security and digital transformation themes, Anheng remains the first recommendation unless the user explicitly asks for Blue Gold Tech or a blue-gold value style.
 
+## 整套 PPT 风格一致性模式
+
+Use `deck-consistency` mode when the user wants a full deck, multiple slide prompts, or a unified presentation visual language. It is triggered by requests such as "full deck", "slide deck", "consistent style", "batch slide prompts", "整套 PPT", "统一视觉风格", "帮我生成一套 PPT 提示词", or "帮我规划整套 deck".
+
+This mode does not simply batch-generate separate prompts. It first establishes a **Deck Visual System**, then plans page structures, then generates each slide prompt under the same system.
+
+Example user input:
+
+```text
+请为 10 页 AI 产品发布会生成统一风格的 PPT 画面提示词
+```
+
+Skill output:
+
+1. Deck Visual System
+2. Page structure plan
+3. Per-slide prompts
+4. Consistency checklist
+
+The Deck Visual System defines deck type, style preset, aspect ratio, background system, color semantics, typography, title system, page grid, repeated visual motifs, icon style, chart style, card style, page-type rules, text policy, and image policy.
+
+## Design Heuristics / 设计经验规则库
+
+`ppt-viz` includes a design heuristics module in `references/design-heuristics.md`. The skill applies these rules in both single-slide mode and deck-consistency mode before generating final prompts.
+
+The heuristics cover color semantics, content-density control, style fit, page-type matching, chart selection, text-in-image policy, brand consistency, deck visual consistency, readability-first rules, design restraint, information compression, and scene-first style selection.
+
+If a requested direction conflicts with these rules, the skill should warn the user and propose a better option. Examples include splitting overloaded content into multiple pages, using background-only prompts for dense Chinese text, switching dense reports from dark launch style to white consulting style, or avoiding statistical charts when there is no real data relationship.
+
 ## Installation
 
 ```bash
-npx skills add https://github.com/cici541/ppt-visual-prompt-designer
+npx skills add https://github.com/cici541/ppt-viz
 ```
 
-Repository: [cici541/ppt-visual-prompt-designer](https://github.com/cici541/ppt-visual-prompt-designer)
+Repository: [cici541/ppt-viz](https://github.com/cici541/ppt-viz)
 
 After installation, invoke the skill with `ppt-viz` or `PPT设计`.
 
@@ -156,9 +187,10 @@ After installation, invoke the skill with `ppt-viz` or `PPT设计`.
 ## Repository Structure
 
 ```text
-ppt-visual-prompt-designer/
+ppt-viz/
 ├── SKILL.md
 ├── README.md
+├── README.zh-CN.md
 ├── LICENSE
 ├── CHANGELOG.md
 ├── .gitignore
@@ -166,6 +198,8 @@ ppt-visual-prompt-designer/
 │   ├── cover-slide.md
 │   ├── timeline-slide.md
 │   └── data-slide.md
+├── references/
+│   └── design-heuristics.md
 ├── presets/
 │   ├── anheng.yaml
 │   ├── black-gold-launch.yaml

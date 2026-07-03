@@ -4,7 +4,7 @@
 
 <p align="center">
   <a href="./LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-blue.svg"></a>
-  <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-08287F.svg">
+  <img alt="Version" src="https://img.shields.io/badge/version-1.2.0-08287F.svg">
   <img alt="Claude Skill" src="https://img.shields.io/badge/Claude-Skill-5B5FC7.svg">
   <img alt="Presentation Design" src="https://img.shields.io/badge/presentation-visual%20design-087380.svg">
   <img alt="Prompt Engineering" src="https://img.shields.io/badge/prompt-engineering-C7001C.svg">
@@ -29,6 +29,8 @@
 - 支持底图模式和成品图模式
 - 支持中文和英文输出结构
 - 输出可直接复制使用的最终画面提示词
+- 支持“整套 PPT 风格一致性模式”，为多页 PPT 建立统一视觉系统并批量生成提示词
+- 内置“设计经验规则库”，用于判断风格适配、色彩语义、内容密度、图表选择、可读性和视觉一致性
 
 ## 适合场景
 
@@ -76,10 +78,39 @@ flowchart TD
 
 **成品图模式**：生成带标题、正文、图表文字或说明文字的完整画面。适合快速出概念图，但图片中的文字可能需要人工校正。
 
+## 整套 PPT 风格一致性模式
+
+当用户想要生成一整套 PPT、多页提示词，或希望“这几页保持同一风格”时，`ppt-viz` 会进入 `deck-consistency` 模式。
+
+这个模式不会简单地逐页批量生成 prompt。它会先建立一套 **Deck Visual System**，再规划页面结构，最后逐页生成画面提示词，确保整套 PPT 统一但不重复。
+
+适合触发语句：
+
+```text
+请为 10 页 AI 产品发布会生成统一风格的 PPT 画面提示词
+```
+
+输出内容包括：
+
+1. Deck Visual System
+2. 页面结构规划
+3. 逐页 prompt
+4. 一致性检查清单
+
+Deck Visual System 会统一定义整套 PPT 的类型、风格预设、画幅、背景系统、色彩语义、字体系统、标题系统、页面网格、视觉母题、图标风格、图表风格、卡片风格、页面类型规则、文字策略和图片策略。
+
+## Design Heuristics / 设计经验规则库
+
+`ppt-viz` 在 `references/design-heuristics.md` 中内置了一套设计经验规则。单页模式和整套 PPT 风格一致性模式都会在生成最终 prompt 前应用这些规则。
+
+规则库覆盖色彩语义、内容密度控制、风格适配、页面类型匹配、图表选择、文字入图、品牌一致性、整套 PPT 视觉一致性、可读性优先、设计克制、信息压缩和场景优先。
+
+如果用户要求与设计经验冲突，Skill 应主动提示并给出更优方案。例如建议拆页、改用无文字底图、从深色发布会风切换到白底咨询风，或在没有真实数据关系时避免强行使用统计图。
+
 ## 安装
 
 ```bash
-npx skills add https://github.com/cici541/ppt-visual-prompt-designer
+npx skills add https://github.com/cici541/ppt-viz
 ```
 
 安装后，重启 Codex / Claude 环境以加载新技能。
@@ -164,13 +195,15 @@ PPT设计，把这页内容转成视觉提示词：
 ## 仓库结构
 
 ```text
-ppt-visual-prompt-designer/
+ppt-viz/
 ├── SKILL.md
 ├── README.md
 ├── README.zh-CN.md
 ├── LICENSE
 ├── CHANGELOG.md
 ├── examples/
+├── references/
+│   └── design-heuristics.md
 ├── presets/
 │   ├── anheng.yaml
 │   ├── black-gold-launch.yaml

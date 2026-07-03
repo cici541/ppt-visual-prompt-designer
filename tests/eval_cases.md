@@ -157,3 +157,171 @@ Please turn this slide content into a visual generation prompt. Slide: Our platf
 - Recognizes the financing / investor roadshow / business plan context.
 - Recommends Black Gold Launch style first when asking about visual style.
 - Still asks only one follow-up question per turn.
+
+## Case 11: Deck consistency with topic only
+
+**Prompt**
+
+```text
+帮我生成一套 AI 安全产品发布会 PPT 的画面提示词，风格统一
+```
+
+**Expected**
+
+- Enters `deck-consistency` mode.
+- Does not directly generate isolated single-slide prompts.
+- Asks for page count / outline first, or defaults to a 10-page structure if the user asks to generate directly.
+- Recommends a suitable style preset for an AI security product launch and explains the reason.
+- Establishes or prepares to establish a Deck Visual System before any per-slide prompt generation.
+
+## Case 12: Deck consistency with user outline
+
+**Prompt**
+
+```text
+请为以下 8 页生成统一的深蓝色科技感发布会风格提示词：
+1. 封面
+2. 产品背景
+3. 产品架构
+4. 核心能力
+5. 应用场景
+6. 客户价值
+7. 发展路线
+8. 结束页
+```
+
+**Expected**
+
+- Enters `deck-consistency` mode.
+- Builds a Deck Visual System before per-slide prompts.
+- Uses a deep-blue technology launch / Tech Blue style system.
+- Outputs a page structure plan for all 8 slides.
+- Generates per-slide prompts that share the same background system, color semantics, typography system, visual motifs, icon style, and card/chart rules.
+- Keeps layouts varied by page type: cover, architecture, capability, scenario, value, roadmap, and closing pages should not look identical.
+
+## Case 13: Deck consistency with background-only text policy
+
+**Prompt**
+
+```text
+帮我为一套 6 页网络安全解决方案 PPT 生成无文字底图 prompt，使用安恒风格
+```
+
+**Expected**
+
+- Enters `deck-consistency` mode.
+- Sets `text_policy = background_only`.
+- Uses `presets/anheng.yaml`.
+- Prompts explicitly forbid readable text, titles, labels, annotations, logos, page numbers, fake UI text, and watermarks.
+- Prompts reserve safe areas for editable PPT text.
+- Maintains Anheng style consistency across all 6 pages.
+
+## Case 14: Deck consistency with finished-image text policy
+
+**Prompt**
+
+```text
+帮我做一套黑金发布会风格融资计划书，每页直接带文字
+```
+
+**Expected**
+
+- Enters `deck-consistency` mode.
+- Sets `text_policy = final_with_text`.
+- Uses `presets/black-gold-launch.yaml`.
+- Plans a financing proposal / investor roadshow deck structure.
+- Each slide prompt includes readable title and content layout requirements.
+- Warns briefly that generated text may still require manual correction.
+- Keeps black-gold launch style consistent while varying cover, market, business model, team, financial, financing, and closing page layouts.
+
+## Case 15: Deck prompt visual consistency review
+
+**Prompt**
+
+```text
+请检查这 5 页 prompt 是否保持同一视觉风格
+```
+
+**Expected**
+
+- Enters visual consistency evaluation for `deck-consistency`.
+- Does not generate a new deck unless asked.
+- Infers or asks for the intended Deck Visual System if prompts are missing.
+- Checks style preset, title system, color semantics, visual motifs, icon style, card style, chart style, page-type differentiation, and forbidden inconsistencies.
+- Outputs issues and concrete modification suggestions.
+
+## Case 16: Design heuristics color semantics
+
+**Prompt**
+
+```text
+PPT设计：把这一页做成蓝金科技风。标题是“AI 转型价值闭环”。内容包括数据治理、流程在线、AI 运营、业务增长。希望用蓝色表示能力建设，用金色突出最终收益。
+```
+
+**Expected**
+
+- Applies Design Heuristics.
+- Confirms that blue represents digital capability / process and gold represents business value / outcomes.
+- Does not use gold for technical process modules.
+- Does not introduce red unless there is a risk or warning.
+- Includes a 设计经验检查 / Design Heuristics Check section or equivalent reasoning.
+
+## Case 17: Design heuristics dense text in dark launch style
+
+**Prompt**
+
+```text
+PPT设计：使用深蓝色科技感发布会风，做一页带完整文字的成品图。正文有 300 字，详细介绍产品架构、部署流程、合规要求、客户案例和售后支持。
+```
+
+**Expected**
+
+- Applies Design Heuristics.
+- Warns that dark technology launch style is not suitable for dense text.
+- Recommends splitting into multiple pages, switching to white consulting / enterprise solution style, grouping text into cards, or using background-only prompt with editable PPT text.
+- Does not silently generate a dense finished-image prompt.
+
+## Case 18: Design heuristics chart misuse prevention
+
+**Prompt**
+
+```text
+PPT设计：标题是“让 AI 更安全可信”。内容是三个观点：可控、可测、可信。请做成一个炫酷饼图。
+```
+
+**Expected**
+
+- Applies Design Heuristics.
+- Refuses or discourages a pie chart because there is no composition/share relationship.
+- Recommends concept cards, triangular model, relationship diagram, or hero visual instead.
+- Explains that charts should serve a real data or structural relationship.
+
+## Case 19: Design heuristics style-scene mismatch
+
+**Prompt**
+
+```text
+PPT设计：帮我做一页网络安全政企汇报，内容是安全运营中心建设方案，但我想用黑金发布会风。
+```
+
+**Expected**
+
+- Applies Design Heuristics.
+- Identifies mismatch between cybersecurity government-enterprise report and Black Gold Launch style.
+- Recommends Anheng style or white enterprise security style.
+- Explains that black-gold is better for financing / investor roadshow / premium business value pages.
+
+## Case 20: Design heuristics readability priority
+
+**Prompt**
+
+```text
+PPT设计：生成一页复杂架构图，背景要很炫，很多发光线条，文字直接压在背景上。
+```
+
+**Expected**
+
+- Applies Design Heuristics.
+- Prioritizes readability over visual effects.
+- Avoids complex backgrounds behind text and excessive glow.
+- Recommends clear layered architecture, fewer connection lines, high-contrast text, and grouped modules.
